@@ -1,0 +1,25 @@
+{
+  "name": "code_pub",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": ">=0.4.1",
+    "grunt-contrib-less": ">=0.8.2",
+    "grunt-contrib-requirejs": ">=0.4.0",
+    "grunt-contrib-watch": ">=0.5.3",
+    "grunt-serve": "^0.1.6"
+  },
+  "description": "Installation ============",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-serve": "^0.1.6",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt": "^0.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
