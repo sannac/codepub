@@ -9,8 +9,6 @@ Installation
 5. Run Grunt serve to start server
 =======
 
-
-
 Setup
 ============
 
