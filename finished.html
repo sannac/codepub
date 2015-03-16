@@ -3,10 +3,12 @@
 <head>
     <meta charset=utf-8/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- tells Internet Explorer to use the latest engine to render the page -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- Gives the browser instructions on how to control the page's dimensions and scaling -->
     <title>My-Responsicve-Site</title>
     <meta name="description" content=""/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/finished.css"/>
 </head>
 
 <body>
@@ -38,7 +40,11 @@
                 <img src="css/img/greg.jpg" alt="Greg">
                 <div class="weekly-camel-text">
                     <h4>Introducing Greg</h4>
-
+                    <input type="checkbox" id="read_more" role="button">
+                    <label for="read_more" onclick>
+                        <span>Read More</span>
+                        <span>Hide this shit</span>
+                    </label>
                     <section>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
                         </p>

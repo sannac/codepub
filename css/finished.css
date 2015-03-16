@@ -8,9 +8,11 @@ body {
 p, li {
 	font-size: 1.3em;
 }
+
 h3 {
 	font-size: 1.5em;
 }
+
 h4 {
 	font-size: 1.4em;
 }
@@ -19,9 +21,11 @@ h4 {
 	p, li {
 		font-size: 1.1em;
 	}
+
 	h3 {
 		font-size: 1.3em;
 	}
+
 	h4 {
 		font-size: 1.2em;
 	}
@@ -29,25 +33,48 @@ h4 {
 
 /* Header Styling */
 header {
-	height: 300px;
+	height: 70vh;
+	/* the % height of the body depends on the amount of content on the page, not the dimensions of the browser window.*/
 }
 
 .image { 
-	 background-image: url("img/camels_large.jpg");
-	 display: block;
-	 background-position: 50% 50%;
-	 height: 100%;
+    background-image: url("img/camels_small.jpg");
+    display: block;
+    width: 100%;
+    background-position: 50% 50%;
+    height: 100%;
 }
 
 .image h1{
+	width: 100%;
+	top: 43%;
+	position: absolute;
+	text-align: center;
+	padding: 1.5em 0;
 	background: #000;
 	color: #fff;
 	opacity: .7;
 }
 
+/* 48em ~ 766px */	
+@media screen and (min-width: 48.0em){
+	header {
+		height: 40vh;
+	}
+	.image {
+		background-image: url("img/camels_large.jpg");
+	}
+	.image h1{
+		top: 20%;
+		padding: 1em 0;
+	}
+}
+
 
 /*  Menu Styling */
 nav { 
+	width: 100%; 
+	height: 30vh;
 }
 nav ul { 
 	padding: 0px; 
@@ -56,10 +83,15 @@ nav ul {
 	margin: 0; 
 }
 nav ul li { 
+	width: 100%; 
+	height: 7.5vh; 
+	border-bottom: 1px solid #ccc; 
 }
 nav ul li a { 
+	display: block; 
 	text-decoration: none; 
 	color: #444; 
+	height:100%; 
 	padding-top:0.5em; 
 }
 nav ul li a:hover { 
@@ -68,6 +100,24 @@ nav ul li a:hover {
 }
 
 
+@media screen and (min-width: 48.0em){
+	nav {
+		height: auto;
+		padding-bottom: 2em;
+	}
+  	nav ul { 
+  		font-size: 16px; 
+  	}
+  	nav ul li { 
+  		height: auto;
+  		width: 15%; 
+  		display: inline-block;
+  		border: 0;
+  	}
+  	nav ul li a { 
+  		padding: 10px 0px; 
+  	}
+}
 
 /* Content */
 
@@ -86,9 +136,11 @@ nav ul li a:hover {
 	text-align: center;
 }
 .weekly-camel img {
+	max-width: 100%;
+	height: auto;
 }
 .weekly-camel section:last-of-type {
-
+    display: none;
 }
 input[type=checkbox] {
     clip: rect(0 0 0 0);
@@ -108,6 +160,7 @@ input[type=checkbox] {
 }
 
 [for="read_more"] span:last-of-type {
+    display: none;
 }
 
 input[type=checkbox]:checked ~ section {
@@ -116,10 +169,31 @@ input[type=checkbox]:checked ~ section {
 }
 
 input[type=checkbox]:checked ~ [for="read_more"] span:first-of-type {
+    display: none;
 }
 
 input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
+    display: block;
 }
+
+@media screen and (min-width: 48.0em){
+	.weekly-camel {
+		width: 20vw;
+		padding: 1em 4em;
+		display: inline-block;
+		float: right;
+		margin: 1em 2em 0 0;
+		border: none;
+	}
+	.weekly-camel section:last-of-type {
+    	display: block;
+	}
+	[for="read_more"] {
+		display: none;
+	}
+
+}
+
 
 /* About Camels */
 .about {
@@ -128,6 +202,8 @@ input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
 	background-color: #fff;
 }
 .about img {
+	max-width: 100%;
+	height: auto;
 }
 
 .about ul {
@@ -138,11 +214,21 @@ input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
 	padding-bottom: 0.5em;
 }
 
+@media screen and (min-width: 48.0em){
+	.about {
+		border: none;
+		width: 45vw;
+		padding: 2em 0 15em 4em;
+		display: inline-block;
+		margin: 0 1em;
+	}	
+}
 
 /* Footer */
 footer {
 	background-color: #292c2f;
 	padding: 1em;
+	width: 100%;
 }
 footer a {
 	color: #fff;
@@ -150,6 +236,11 @@ footer a {
 	text-decoration: none;
 }
 
+@media screen and (min-width: 48.0em) {
+	footer h3{
+		font-size: 1em;
+	}
+}
 
 
 
